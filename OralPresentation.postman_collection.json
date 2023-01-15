@@ -1,0 +1,433 @@
+{
+	"info": {
+		"_postman_id": "475cf762-62c6-4072-909e-8d582e7e6bea",
+		"name": "OralPresentation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22734692"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8081/authentication/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"memberId\": \"semo\",\n    \"password\": \"1234\",\n    \"positions\": [{\"position\" : \"COX\"}, \n                    {\"position\" : \"COACH\"}],\n    \"gender\": \"MALE\",\n    \"firstName\": \"first\",\n    \"lastName\": \"last\",\n    \"level\": \"AMATEUR\",\n    \"organization\": \"tudelft\",\n    \"certificate\": \"C4\",\n    \"availabilities\": [\n        {\n            \"dayOfWeek\": \"1\",\n            \"startTime\": \"10:45\",\n            \"endTime\": \"16:45\"\n        },\n        {\n            \"dayOfWeek\": \"2\",\n            \"startTime\": \"10:45\",\n            \"endTime\": \"16:45\"\n        },\n        {\n            \"dayOfWeek\": \"3\",\n            \"startTime\": \"10:45\",\n            \"endTime\": \"16:45\"\n        },\n        {\n            \"dayOfWeek\": \"4\",\n            \"startTime\": \"10:45\",\n            \"endTime\": \"16:45\"\n        },\n        {\n            \"dayOfWeek\": \"5\",\n            \"startTime\": \"10:45\",\n            \"endTime\": \"16:45\"\n        }\n        ,{\n            \"dayOfWeek\": \"6\",\n            \"startTime\": \"10:45\",\n            \"endTime\": \"16:45\"\n        },\n        {\n            \"dayOfWeek\": \"7\",\n            \"startTime\": \"10:45\",\n            \"endTime\": \"16:45\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/authentication/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"authentication",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/authentication/authenticate Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXRlaSIsInJvbGVzIjpbXSwiZXhwIjoxNjcxNjQwMzY0LCJpYXQiOjE2NzE1NTM5NjQsInVzZXJuYW1lIjoibWF0ZWkifQ.8XVRHT4HXChcQkx7nr780Yiss2FLNkz2v1gkoqspLoOYDSxqnOLEEip20ezpyBl7GogUBbZGLnhyO7NvhDbGDw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"memberId\": \"semo\",\n    \"password\": \"1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/authentication/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"authentication",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/authentication/register Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"memberId\": \"sem\",\n    \"password\": \"1234\",\n    \"positions\": [{\"position\" : \"COX\"}, \n                    {\"position\" : \"COACH\"}],\n    \"gender\": \"MALE\",\n    \"firstName\": \"first\",\n    \"lastName\": \"last\",\n    \"level\": \"AMATEUR\",\n    \"organization\": \"tudelft\",\n    \"certificate\": \"C4\",\n    \"availabilities\": [\n        {\n            \"dayOfWeek\": \"1\",\n            \"startTime\": \"12:45\",\n            \"endTime\": \"13:45\"\n        },\n        {\n            \"dayOfWeek\": \"2\",\n            \"startTime\": \"10:45\",\n            \"endTime\": \"16:45\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/authentication/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"authentication",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/authentication/changeUserPassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"memberId\": \"sem\",\n    \"oldPassword\": \"1234\",\n    \"newPassword\": \"987654321\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/authentication/changeUserPassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"authentication",
+						"changeUserPassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8081/authentication/authenticate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtYXRlaSIsInJvbGVzIjpbXSwiZXhwIjoxNjcxNjQwMzY0LCJpYXQiOjE2NzE1NTM5NjQsInVzZXJuYW1lIjoibWF0ZWkifQ.8XVRHT4HXChcQkx7nr780Yiss2FLNkz2v1gkoqspLoOYDSxqnOLEEip20ezpyBl7GogUBbZGLnhyO7NvhDbGDw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"memberId\": \"sem\",\n    \"password\": \"987654321\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/authentication/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"authentication",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/create/competition",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n    \"date\": \"2024-01-03\",\n    \"requiredPositions\": [\n    {\n        \"position\": \"COX\",\n        \"requiredOfPosition\": \"1\"\n    },\n    {\n        \"position\": \"COACH\",\n        \"requiredOfPosition\": \"1\"\n    }\n    ],\n    \"boatType\": \"C4\",\n    \"startTime\": \"13:30\",\n    \"endTime\": \"15:00\",\n    \"allowedLevel\": \"AMATEUR\",\n    \"allowedGender\": \"MALE\",\n    \"organization\": \"tudelft\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/create/competition",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"create",
+						"competition"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/update/training",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"activityId\": \"1\",\n    \"ownerId\": \"2\",\n    \"date\": \"2024-01-03\",\n    \"requiredPositions\": [\n    {\n        \"position\": \"COX\",\n        \"requiredOfPosition\": \"1\"\n    }\n    ],\n    \"boatType\": \"C4\",\n    \"startTime\": \"13:30\",\n    \"endTime\": \"15:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/update/competition",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"update",
+						"competition"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/retrieve/competitions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"position\": \"COX\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/retrieve/competitions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"retrieve",
+						"competitions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/join/4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"position\":\"COX\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/join/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"join",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/request/2/2/decline",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOltdLCJleHAiOjE2NzE4NDEwODcsImlhdCI6MTY3MTc1NDY4NywidXNlcm5hbWUiOiJ1c2VyIn0.hN2wYGUnXtcYBdhnuWec8dZf9_sCmW_V3McvbFzbS7vIW9WGBVpYFbVTGbxPylJSLKXQYRRt_rQLrOkPMhefqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/request/1/1/decline",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"request",
+						"1",
+						"1",
+						"decline"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/request/2/2/decline Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwicm9sZXMiOltdLCJleHAiOjE2NzE4NDEwODcsImlhdCI6MTY3MTc1NDY4NywidXNlcm5hbWUiOiJ1c2VyIn0.hN2wYGUnXtcYBdhnuWec8dZf9_sCmW_V3McvbFzbS7vIW9WGBVpYFbVTGbxPylJSLKXQYRRt_rQLrOkPMhefqw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/request/1/1/accept",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"request",
+						"1",
+						"1",
+						"accept"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8082/users/1/requests/pending",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZW0iLCJyb2xlcyI6W10sImV4cCI6MTY3MTg3NzcwMywiaWF0IjoxNjcxNzkxMzAzLCJ1c2VybmFtZSI6InNlbSJ9.tKFgdTG3poVnKhT9g3MN5OZOFkEz9vOXnDR88sQScOtZTTHrVeepFoPpfLKAUlBpkCgqGAKVw_Vn-6ClRGTNfg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/users/1/requests/pending",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"users",
+						"2",
+						"requests",
+						"pending"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
